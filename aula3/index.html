@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form method="host">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" placeholder="Insira seu nome..." required>
+        <br>
+        <label for="idade">Idade: </label>
+        <input type="number" name="idade" id="idade" min="0" max="100" required>
+        <br>
+        <label for="nascimento">Data de nascimento: </label>
+        <input type="date" name="nascimento" id="nascimento" required>
+        <br>
+        <label for="email">E-mail: : </label>
+        <input type="email" name="email" id="idade" required>
+        <br>
+        <label for="curso">Escolha seu curso: </label>
+        <select>
+            <option selected disabled>Selecione...</option>
+            <option value="info">Informática</option>
+            <option value="amb">Meio Ambiente</option>
+            <option value="qui">Química</option>
+            <option value="adm">Administração</option>
+        </select>
+        <br>
+        <label>Informe o turno do seu curso: </label>
+        <input type="radio" name="turno" value="manhã"> Manhã
+        <input type="radio" name="turno" value="tarde"> Tarde
+        <br>
+        <label>Como você vem para a escola: </label>
+        <input type="checkbox" name="publico" value="publico" checked> Público
+        <input type="checkbox" name="privado" value="privado"> Privado
+        <br>
+        <!--Forma 1-->
+        <button name="cadastrar">Cadastrar</button>
+        <br>
+        <!--Forma 2-->
+        <input type="submit" name="button" value="Cadastrar">
+    </form>
+</body>
+</html>
