@@ -6,7 +6,9 @@
     <title>Formulário</title>
 </head>
 <body>
-    <form method="host">
+    <script src="script.js" defer></script>
+
+    <form method="host" id="formulario">
         <label for="nome">Nome: </label>
         <input type="text" name="nome" id="nome" placeholder="Insira seu nome..." required>
         <br>
@@ -37,10 +39,10 @@
         <input type="checkbox" name="privado" value="privado"> Privado
         <br>
         <!--Forma 1-->
-        <button name="cadastrar">Cadastrar</button>
+        <!-- <button name="cadastrar">Cadastrar</button>-->
         <br>
         <!--Forma 2-->
-        <input type="submit" name="button" value="Cadastrar">
+        <input type="submit" name="button" value="Cadastrar"  id="botao">
     </form>
 </body>
 </html>
