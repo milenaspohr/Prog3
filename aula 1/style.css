@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sigmar&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+
+p{
+    margin: 10px;
+    padding: 10px;
+}
+
+ol,ul{
+    padding-left: 20px;
+}
+
+figure{
+    width: 300px;
+    margin: 0 auto;
+}
+
+img{
+    width: 100%;
+}
+
+h3{
+    margin: 8px;
+}
+
+.lilas{
+    background-color: violet;
+    color: yellow;
+}
+
+.verdelimao{
+    background-color: greenyellow;
+    
+}
+
+#container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+td,th{
+    border: 2px solid black;
+    padding: 4px;
+    
+}
+
+a:hover{
+    font-size: 30px;
+    border: 2px solid black ;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+li:first-child{
+    background-color: yellow;
+}
+
+li::after{
+    content: ';';
+}
+
+li::before{
+    content: '<3 ';
+}
