@@ -1,50 +1,25 @@
-const radios1 = document.querySelectorAll('input[name="jogada1"]');
-const radios2 = document.querySelectorAll('input[name="jogada2"]');
-const resultadoDiv = document.getElementById('resultado');
+const gols1 = document.getElementById('gols1');
+const gols2 = document.getElementById('gols2');
 
-function verificarVencedor() {
-  const nome1 = document.getElementById('nome1').value || "Jogador 1";
-  const nome2 = document.getElementById('nome2').value || "Jogador 2";
- 
-  let jogada1 = null;
-  for (let i = 0; i < radios1.length; i++) {
-    if (radios1[i].checked) {
-      jogada1 = radios1[i].value;
-      break;
-    }
-  }
-  
-  let jogada2 = null;
-  for (let i = 0; i < radios2.length; i++) {
-    if (radios2[i].checked) {
-      jogada2 = radios2[i].value;
-      break;
-    }
-  }
-  
-  if (!jogada1 || !jogada2) {
-    resultadoDiv.textContent = "";
-    return;
-  }
+function verificarResultado() {
+  const nome1 = document.getElementById('time1').value;
+  const nome2 = document.getElementById('time2').value;
+  const g1 = parseInt(gols1.value);
+  const g2 = parseInt(gols2.value);
+  const resultado = document.getElementById('resultado');
 
-  if (jogada1 === jogada2) {
-    resultadoDiv.textContent = "Empate!";
-  } else if (
-    (jogada1 === "pedra" && jogada2 === "tesoura") ||
-    (jogada1 === "papel" && jogada2 === "pedra") ||
-    (jogada1 === "tesoura" && jogada2 === "papel")
-  ) {
-    resultadoDiv.textContent = `${nome1} venceu!`;
+  if (!isNaN(g1) && !isNaN(g2)) {
+    if (g1 > g2) {
+      resultado.textContent = `Vitória do ${nome1}`;
+    } else if (g2 > g1) {
+      resultado.textContent = `Vitória do ${nome2}`;
+    } else {
+      resultado.textContent = "Empate!";
+    }
   } else {
-    resultadoDiv.textContent = `${nome2} venceu!`;
+    resultado.textContent = "";
   }
 }
 
-for (let i = 0; i < radios1.length; i++) {
-  radios1[i].addEventListener('change', verificarVencedor);
-}
-
-for (let i = 0; i < radios2.length; i++) {
-  radios2[i].addEventListener('change', verificarVencedor);
-}
-
+gols1.addEventListener('input', verificarResultado);
+gols2.addEventListener('input', verificarResultado);

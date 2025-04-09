@@ -3,56 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pedra, Papel, Tesoura</title>
+  <title>IF Soccer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main>
-    <h1>Pedra-Papel-Tesoura</h1>
+  <h1>IF Soccer</h1>
+  <input type="text" id="time1" placeholder="Nome do Time 1" />
+  <input type="number" id="gols1" placeholder="Gols Time 1" />
+  <label>X</label>
+  <input type="text" id="time2" placeholder="Nome do Time 2" />
+  <input type="number" id="gols2" placeholder="Gols Time 2" />
+  <div class="resultado" id="resultado"></div>
 
-    <section class="jogador" id="jogador1">
-      <h2>Jogador 1</h2>
-      <input type="text" id="nome1" placeholder="Nome do Jogador 1" />
-
-      <div class="opcoes">
-        <label>
-          <input type="radio" name="jogada1" value="pedra" />
-          <img src="https://img.icons8.com/emoji/96/rock-emoji.png" alt="Pedra">
-        </label>
-        <label>
-          <input type="radio" name="jogada1" value="papel" />
-          <img src="https://img.icons8.com/emoji/96/page-facing-up-emoji.png" alt="Papel">
-        </label>
-        <label>
-          <input type="radio" name="jogada1" value="tesoura" />
-          <img src="https://img.icons8.com/emoji/96/scissors-emoji.png" alt="Tesoura">
-        </label>
-      </div>
-    </section>
-
-    <section class="jogador" id="jogador2">
-      <h2>Jogador 2</h2>
-      <input type="text" id="nome2" placeholder="Nome do Jogador 2" />
-
-      <div class="opcoes">
-        <label>
-          <input type="radio" name="jogada2" value="pedra" />
-          <img src="https://img.icons8.com/emoji/96/rock-emoji.png" alt="Pedra">
-        </label>
-        <label>
-          <input type="radio" name="jogada2" value="papel" />
-          <img src="https://img.icons8.com/emoji/96/page-facing-up-emoji.png" alt="Papel">
-        </label>
-        <label>
-          <input type="radio" name="jogada2" value="tesoura" />
-          <img src="https://img.icons8.com/emoji/96/scissors-emoji.png" alt="Tesoura">
-        </label>
-      </div>
-    </section>
-
-    <div class="resultado" id="resultado"></div>
-  </main>
-
+  <div class=" infos">
+    <label>Milena Spohr</label>
+    <br>
+    <label>2025</label>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
